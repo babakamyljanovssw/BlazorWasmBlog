@@ -1,10 +1,12 @@
 ﻿<!--
 - created: 30-10-2024
 - author: Babanazar Kamyljanov
-- tags: hello, world
+- tags: blog
 -->
 
-## Markdown blogging in Blazor WASM
+## How to create markdown based blog in Blazor WASM?
+
+![](./images/blazor-webassembly.png)
 
 Here is step by step guide to convert markdown file to html in Blazor WASM.
 

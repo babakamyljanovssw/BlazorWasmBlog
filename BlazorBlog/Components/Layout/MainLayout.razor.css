@@ -39,28 +39,6 @@ main {
     text-decoration: none;
 }
 
-/*@media (max-width: 640.98px) {
-    .top-row {
-        justify-content: space-between;
-    }
-
-    .top-row ::deep .nav-link {
-        margin-left: 0;
-    }
-}*/
-
-/*@media (min-width: 641px) {
-    .page {
-        flex-direction: row;
-    }
-
-    .top-row {
-        position: sticky;
-        top: 0;
-        z-index: 1;
-    }
-}*/
-
 @media (min-width: 420 px) {
     .top-row {
         flex-direction: column;

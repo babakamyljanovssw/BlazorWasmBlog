@@ -1,4 +1,3 @@
-/*TODO: Fix responsiveness*/
 html, body {
     font-family: Nunito;
 }
@@ -15,6 +14,12 @@ a {
     padding-top: 1.1rem;
     margin-left: 25%;
     margin-right: 25%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 #blazor-error-ui {
@@ -77,6 +82,13 @@ a {
 
 .loading-progress-text:after {
     content: var(--blazor-load-percentage-text, "Loading");
+}
+
+@media (max-width: 39.375rem) {
+    .content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 }
 
 code {

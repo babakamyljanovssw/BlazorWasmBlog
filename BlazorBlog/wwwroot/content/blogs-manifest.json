@@ -1,0 +1,18 @@
+{
+  "blogs": [
+    {
+      "slug": "create-markdown-blog-in-blazor",
+      "title": "How to create markdown based blog in Blazor WASM?",
+      "createdDate": "30-10-2024",
+      "author": "Babanazar Kamyljanov",
+      "tags": "blazor, markdown, blog"
+    },
+    {
+      "slug": "hello-world",
+      "title": "Hello",
+      "createdDate": "1-11-2024",
+      "author": "Babanazar Kamyljanov",
+      "tags": "blog"
+    }
+  ]
+}

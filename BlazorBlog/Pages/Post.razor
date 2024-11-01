@@ -1,0 +1,21 @@
+﻿@page "/blogs/{slug}"
+@using Markdig
+@inject HttpClient Http
+@inject MarkdownPipeline Pipeline
+
+<PageTitle>Blogs</PageTitle>
+
+<div>@((MarkupString)markdownContent)</div>
+
+@code {
+    private string markdownContent = string.Empty;
+
+    [Parameter]
+    public string Slug { get; set; } = null!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var response = await Http.GetStringAsync($"content/{Slug}.md");
+        markdownContent = Markdown.ToHtml(response, Pipeline);
+    }
+}

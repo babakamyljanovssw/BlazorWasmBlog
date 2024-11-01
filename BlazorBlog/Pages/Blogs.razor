@@ -1,18 +1,48 @@
 ﻿@page "/blogs"
-@using Markdig
+@using System.Text.Json
 @inject HttpClient Http
-@inject MarkdownPipeline Pipeline
 
-<PageTitle>Blogs</PageTitle>
+<h3>All Blogs</h3>
 
-<div>@((MarkupString)markdownContent)</div>
+@if (blogPosts is null)
+{
+    <p>Loading...</p>
+}
+else if (blogPosts.Count == 0)
+{
+    <p>No blogs were found</p>
+}
+else
+{
+    <ul>
+        @foreach (var post in blogPosts)
+        {
+            var postUrl = $"blogs/{post.Slug}";
+            <li><NavLink href="@postUrl">@post.Title</NavLink></li>
+        }
+    </ul>
+}
 
 @code {
-    private string markdownContent = string.Empty;
+    private List<BlogPost>? blogPosts { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        var response = await Http.GetStringAsync("content/hello-world.md");
-        markdownContent = Markdown.ToHtml(response, Pipeline);
+        try
+        {
+            var response = await Http.GetStringAsync("content/blogs-manifest.json");
+
+            var manifest = JsonSerializer.Deserialize<BlogManifest>(response, new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                });
+
+            blogPosts = manifest?.Blogs;
+        } 
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading blog slugs: {ex.Message}");
+        }
+
     }
 }

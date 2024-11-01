@@ -13,6 +13,7 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 builder.Services.AddScoped(sp =>
     new MarkdownPipelineBuilder()
     .UseAdvancedExtensions()
+    .UseYamlFrontMatter()
     .UseSyntaxHighlighting()
     .Build());
 

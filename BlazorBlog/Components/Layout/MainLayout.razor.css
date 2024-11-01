@@ -33,12 +33,13 @@ main {
     color: gray;
 }
 
-.top-row ::deep .nav-link.logo {
+.top-row ::deep .logo {
     font-size: 1.5rem;
     color: red;
+    text-decoration: none;
 }
 
-@media (max-width: 640.98px) {
+/*@media (max-width: 640.98px) {
     .top-row {
         justify-content: space-between;
     }
@@ -46,9 +47,9 @@ main {
     .top-row ::deep .nav-link {
         margin-left: 0;
     }
-}
+}*/
 
-@media (min-width: 641px) {
+/*@media (min-width: 641px) {
     .page {
         flex-direction: row;
     }
@@ -57,5 +58,11 @@ main {
         position: sticky;
         top: 0;
         z-index: 1;
+    }
+}*/
+
+@media (min-width: 420 px) {
+    .top-row {
+        flex-direction: column;
     }
 }

@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\content\hello-world.md" />
+    <None Include="wwwroot\content\create-markdown-blog-in-blazor.md" />
   </ItemGroup>
 
   <ItemGroup>

@@ -9,8 +9,7 @@ main {
 }
 
 .top-row {
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #d6d5d5;
+    background-color: var(--main-color);
     height: 3.5rem;
     display: flex;
     align-items: center;
@@ -20,7 +19,7 @@ main {
 .top-row ::deep .nav-link {
     white-space: nowrap;
     text-decoration: none;
-    color: black;
+    color: var(--main-text);
 }
 
 .top-row ::deep .nav-link:hover {
@@ -34,7 +33,7 @@ main {
 
 .top-row ::deep .logo {
     font-size: 1.5rem;
-    color: red;
+    color: var(--main-text);
     text-decoration: none;
 }
 

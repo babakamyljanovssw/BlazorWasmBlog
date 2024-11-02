@@ -1,5 +1,25 @@
+:root {
+    --main-color: #152028;
+    --secondary-color: #192734;
+    --border-color: #164d56;
+    --main-text: #fff;
+    --secondary-text: #eeeeee;
+}
+
+body {
+    background-color: var(--secondary-color)
+}
+
 html, body {
-    font-family: Nunito;
+    font-family: 'Russo One';
+}
+
+h1,h2,h3,h4 {
+    color: var(--main-text);
+}
+
+p, li {
+    color: var(--secondary-text);
 }
 
 h1:focus {
@@ -7,7 +27,7 @@ h1:focus {
 }
 
 a {
-    color: #0071c1;
+    color: var(--secondary-text);
 }
 
 .content {

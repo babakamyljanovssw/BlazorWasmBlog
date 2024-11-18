@@ -104,12 +104,19 @@ img {
     content: var(--blazor-load-percentage-text, "Loading");
 }
 
-@media (max-width: 39.375rem) {
+@media (max-width: 47.188rem) {
+    .content {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+/*@media (max-width: 39.375rem) {
     .content {
         margin-left: 5%;
         margin-right: 5%;
     }
-}
+}*/
 
 code {
     padding: 2px 4px;

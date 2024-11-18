@@ -43,13 +43,19 @@ main {
     align-items: center;
 }
 
-@media (max-width: 39.375rem) {
+@media (max-width: 47.188rem) {
     .top-row {
-        padding-left: 5%;
+        padding-left: 10%;
     }
 }
 
-@media (max-width: 31.25rem) {
+/*@media (max-width: 39.375rem) {
+    .top-row {
+        padding-left: 5%;
+    }
+}*/
+
+@media (max-width: 37.5rem) {
     .top-row {
         flex-direction: column;
         align-items: flex-start;

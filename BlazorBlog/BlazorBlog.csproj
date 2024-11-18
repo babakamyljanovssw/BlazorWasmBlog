@@ -17,11 +17,6 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.11" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.11" PrivateAssets="all" />
   </ItemGroup>
-  
-
-  <!--<ItemGroup>
-    <None Include="wwwroot\content\create-markdown-blog-in-blazor.md" />
-  </ItemGroup>-->
 
   <ItemGroup>
     <Folder Include="wwwroot\images\" />
